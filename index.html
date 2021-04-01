@@ -17,7 +17,7 @@
                 <img alt="instagram-top-left-logo" class="pointerchange" onclick="redirecthome()" style="height: 30px;" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png">
             </div>
             <div>
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="Search" id="searchsomeone">
             </div>
             <div>
                 <img class="pointerchange" src=images/Home.png " onclick="redirecthome() ">
@@ -33,6 +33,17 @@
                     }
                     function redirectexplore(){
                         window.location.href = "https://www.instagram.com/explore/ ";
+                    }
+                    var instagramid = document.getElementById("searchsomeone ").textContent;
+                    searchsomeone.addEventListener("keydown ", function(e){
+                        if(e.keyCode === 13){
+                            validateredirect(e);
+                        }
+                    })();
+                    function validateredirect(e){
+                        var pagelink = "https://www.instagram.com/ " + instagramid;
+                        console.log(pagelink);
+                        // window.location.href = pagelink;
                     }
                 </script>
             </div>
@@ -63,11 +74,12 @@
             </p>
 
             <p>
-                DogsOf
-                <div style="color: grey; ">Community</div>
+                <b style="font-size: 20px; ">DogsOf</b><br><span class="community ">Community</span>
             </p>
+            <p style="font-size: 18px; ">
             Bringing together the dogs of Instagram 🐾 <br> Text “DogsOfIG” to 415-528-7403 for weekly updates 📲 <br> Link in bio for all feature submissions & more! 👇<br>
             <a style="color: blue; " href="https://linktr.ee/dogsofinstagram ">linktr.ee/dogsofinstagram</a>
+            </p>
         </div>
     </div>
 
@@ -249,6 +261,17 @@
             <script async src="//www.instagram.com/embed.js "></script>
         </div>
     </div>
+    <br>
+    <br>
+    <!-- Load more section -->
+    <div class="loadmore " onclick="redirectonloadmore() ">
+        Load More
+    </div>
+    <script>
+        function redirectonloadmore(){
+            window.location.href = "https://www.instagram.com/dogsofinstagram ";
+        }
+    </script>
     <script src="javascript/main.js "></script>
 </body>
 
