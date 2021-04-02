@@ -1,3 +1,30 @@
 .pointerchange:hover {
     cursor: pointer;
 }
+
+.community {
+    color: grey;
+}
+
+.loadmore {
+    background-color: black;
+    color: white;
+    margin-left: 600px;
+    margin-right: 600px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: solid;
+    border-color: white;
+}
+
+.loadmore:hover {
+    height: 32px;
+    margin-left: 590px;
+    margin-right: 590px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 0px;
+}
